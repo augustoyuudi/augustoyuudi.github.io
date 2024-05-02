@@ -1,0 +1,12 @@
+<div>
+  <p>test page</p>
+  <p class="title"></p>
+</div>
+
+<script>
+  const url = new URL(window.location.href)
+  const language = url.searchParams.get('language')
+
+  const tag = document.querySelector('.title')
+  tag.innerHTML = `${ language === 'en' ? 'English' : 'Portuguese' }`
+</script>
